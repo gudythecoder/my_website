@@ -17,11 +17,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
 /* Navigation Menu */
 nav ul {
     list-style-type: none;
@@ -49,30 +44,18 @@ nav ul li a:hover, nav ul li button:hover {
     color: #FFD700;
 }
 
-/* Section Styling */
-section {
-    background-color: white;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 1200px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-section h2 {
-    font-size: 2em;
-    color: #2E8B57;
-    border-bottom: 2px solid #2E8B57;
-    padding-bottom: 10px;
-}
-
-/* Project Box */
-.project {
+/* Project & Blog Post Styling */
+.project, .blog-post {
     background-color: #f9f9f9;
     padding: 15px;
     border-radius: 8px;
     margin: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover, .blog-post:hover {
+    transform: scale(1.05);
 }
 
 /* Button Styles */
@@ -90,51 +73,23 @@ button:hover {
     background-color: #3CB371;
 }
 
-/* Form Styling */
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Social Media Links */
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2E8B57;
+    transition: color 0.3s ease;
 }
 
-form button {
-    margin-top: 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2em;
-    background-color: #2E8B57;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-    margin: 0;
+.social-links a:hover {
+    color: #FFD700;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
     nav ul li {
         display: block;
         margin: 10px 0;
-    }
-
-    section {
-        margin: 10px;
-    }
-
-    section h2 {
-        font-size: 1.8em;
     }
 }
