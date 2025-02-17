@@ -3,45 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css"> <!-- This links the CSS file -->
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+    
+    <!-- Dark Mode Style -->
+    <style>
+      body.dark-mode { background-color: #222; color: #fff; }
+    </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Welcome to My Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button onclick="toggleDarkMode()">Dark Mode</button></li> <!-- Dark Mode Toggle -->
             </ul>
         </nav>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I specialize in AI, Business Analytics, and Data Science. Welcome to my portfolio.</p>
+        <p>Hello! I specialize in AI, Business Analytics, and Data Science. This portfolio showcases my projects and work.</p>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1 - AI-Powered Business Insights</li>
-            <li>Project 2 - Data Pipeline Optimization</li>
-            <li>Project 3 - Sentiment Analysis in NLP</li>
-        </ul>
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>AI-Powered Business Insights</h3>
+            <p>Developed predictive models to analyze business trends and optimize decision-making.</p>
+        </div>
+        <div class="project">
+            <h3>Data Pipeline Optimization</h3>
+            <p>Designed a scalable data pipeline using Python and SQL to improve data processing efficiency.</p>
+        </div>
+        <div class="project">
+            <h3>Sentiment Analysis in NLP</h3>
+            <p>Used machine learning and NLP to analyze customer sentiment from social media data.</p>
+        </div>
     </section>
 
+    <!-- Resume Download -->
+    <section id="resume">
+        <h2>My Resume</h2>
+        <p>Download my resume below:</p>
+        <a href="resume.pdf" download="My_Resume.pdf">
+            <button>Download Resume</button>
+        </a>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Feel free to reach out for collaborations!</p>
-        <button>Contact Me</button>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 My Website | All Rights Reserved</p>
+        <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
     </footer>
+
+    <!-- Dark Mode Script -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 
 </body>
 </html>
+
