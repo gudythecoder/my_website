@@ -6,6 +6,20 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
     
+    <!-- Smooth Scrolling -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+
     <!-- Dark Mode Style -->
     <style>
       body.dark-mode { background-color: #222; color: #fff; }
@@ -20,6 +34,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><button onclick="toggleDarkMode()">Dark Mode</button></li> <!-- Dark Mode Toggle -->
             </ul>
@@ -30,6 +45,13 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! I specialize in AI, Business Analytics, and Data Science. This portfolio showcases my projects and work.</p>
+        
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        </div>
     </section>
 
     <!-- Projects Section -->
@@ -49,6 +71,23 @@
         </div>
     </section>
 
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-post">
+            <h3><a href="#">The Role of AI in Business Analytics</a></h3>
+            <p>Exploring how AI is transforming business intelligence and decision-making.</p>
+        </div>
+        <div class="blog-post">
+            <h3><a href="#">Data Science in Real Estate</a></h3>
+            <p>How predictive analytics is revolutionizing property investment.</p>
+        </div>
+        <div class="blog-post">
+            <h3><a href="#">Building Ethical AI Systems</a></h3>
+            <p>A look into fairness, bias, and accountability in artificial intelligence.</p>
+        </div>
+    </section>
+
     <!-- Resume Download -->
     <section id="resume">
         <h2>My Resume</h2>
@@ -61,10 +100,10 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message"></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
