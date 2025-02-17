@@ -34,15 +34,18 @@ nav ul li {
     margin: 0 20px;
 }
 
-nav ul li a {
+nav ul li a, nav ul li button {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 1.1em;
     transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li button:hover {
     color: #FFD700;
 }
 
@@ -63,10 +66,13 @@ section h2 {
     padding-bottom: 10px;
 }
 
-section p, section ul {
-    font-size: 1.1em;
-    line-height: 1.8;
-    margin-top: 15px;
+/* Project Box */
+.project {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Button Styles */
@@ -82,6 +88,19 @@ button {
 
 button:hover {
     background-color: #3CB371;
+}
+
+/* Form Styling */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 10px;
 }
 
 /* Footer */
@@ -100,7 +119,7 @@ footer p {
     margin: 0;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
